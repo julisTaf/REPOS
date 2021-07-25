@@ -1,0 +1,143 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+   box-sizing: border-box; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+
+    nav.topnav {
+        width: 100%;
+        color: #ccc;
+        padding: 0 2vw;
+        display: flex;
+        align-items: center;
+        background-color: rgb(9, 117, 117);
+    }
+
+    nav.topnav > h3 {
+        font-size: xx-large;
+        font-family: 'Oregano';
+        justify-self: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    nav.topnav > button.open {
+        outline: none;
+        border: none;
+        justify-self: flex-start;
+        background-color: inherit;
+        color: white;
+        font-size: larger;
+        cursor: pointer;
+    }
+
+    @keyframes slideFromLeft {
+        from {left: -5vw; opacity:0}
+        to {left:0; opacity:1}
+    }
+
+    @keyframes slideFromRight {
+        from {right: -5vw; opacity:0}
+        to {right:0; opacity:1}
+    }
+
+    /* Sidenav */
+
+    nav.sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(23, 146, 146);
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 10vw;
+    }
+
+    nav.sidenav a {
+        padding: 2vw 3vw 3vw 6vw;
+        text-decoration: none;
+        font-size: x-large;
+        color: #dbd4d4;
+        display: block;
+        transition: 0.3s;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    nav.sidenav > a.active {
+        background-color: rgb(60, 158, 158);
+    }
+
+    nav.sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    nav.sidenav a.closebtn {
+        position: absolute;
+        top: 0;
+        right: 5vw;
+        font-size: 13vw;
+        margin-left: 15vw;
+    }
+
+    @media only screen and (min-width: 850px) {
+        html {
+            --side-bg: white;
+            --side-color: #888;
+            --side-border: .01vw solid grey;
+        }
+        html[data-theme='dark'] {
+            --side-bg: rgb(88, 83, 83);
+            --side-color: rgb(250, 248, 248);
+            --side-border: .01vw solid rgb(253, 249, 249);
+        }
+        nav.sidenav {
+            display: flex;
+            align-self: flex-start;
+            width: auto;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            background-color: var(--side-bg);
+            color: var(--side-color);
+            font-size: larger;
+            position: unset;
+            height: auto;
+            padding: 1.5vw 0;
+            margin: 7.5vw 0 0;
+            border-radius: 0 .5vw .5vw 0;
+            border: var(--side-border);
+        }
+        nav.sidenav a:hover {
+            color: #8d8a8a;
+        }
+        nav.sidenav a.closebtn {
+            display: none;
+        }
+        nav.sidenav > a {
+            padding: 1.5vw !important;
+            text-decoration: none;
+            font-size: larger !important;
+            color: #cac6c6;
+            user-select: none;
+        }
+    }
+    
+    @keyframes animateBottom {
+        from {bottom:-30vw; opacity:0}
+        to {bottom:0; opacity:1}
+    }
