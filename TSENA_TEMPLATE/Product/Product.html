@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/56a272ca2b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/Nav.css">
+    <script src="../js/Nav.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oregano">
     <title>Document</title>
 </head>
 <body>
-    
+    <nav class="topnav">
+        <button class="open" onclick="openNav()"><span>&#9776; </span></button>
+        <h3>RHR</h3>
+    </nav>
+
+    <nav class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/RHR/Overview">Bilan actuel</a>
+        <a href="/RHR/Products">Produits</a>
+        <a href="/RHR/Commands">Commandes</a>
+        <a href="/RHR/Reservations">Réservations</a>
+        <a href="/RHR/Command/New">Nouvelle(s) commande(s)</a>
+        <a href="/RHR/Reservation/New">Nouvelle(s) réservation(s)</a>
+        <a href="/RHR/History">Historique</a>
+    </nav>
 </body>
 </html>
