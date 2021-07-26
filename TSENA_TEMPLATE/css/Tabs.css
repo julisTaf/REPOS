@@ -1,0 +1,35 @@
+div.tabHeaders {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+div.tabHeaders > button.tabHeader {
+    outline: none;
+    border: none;
+    border-bottom: .1rem solid rgb(48, 187, 187);
+    background-color: rgb(238, 230, 230);
+    padding: 1rem;
+    margin: 0;
+    width: 33.33%;
+}
+
+div.tabHeaders > button.tabHeader.active {
+    border: .1rem solid rgb(48, 187, 187);
+    border-bottom: none;
+    background-color: #fff;
+}
+
+section.tabContent {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.tabContent.active {
+    display: flex;
+    border: .1rem solid rgb(48, 187, 187);
+    border-top: none;
+}
