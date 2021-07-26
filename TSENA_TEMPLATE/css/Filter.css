@@ -1,0 +1,14 @@
+main input {
+    margin: 1.5rem auto 1rem;
+    width: 70%;
+    padding: .25rem .5rem;
+    font-size: medium;
+    border-radius: .2rem;
+    outline: none;
+    border: .1rem solid rgb(64, 201, 201);
+    box-shadow: .07rem .07rem .3rem lightgray, -.07rem -.07rem .3rem lightgrey;
+}
+
+main input:focus {
+    box-shadow: .03rem .06rem .2rem lightgray inset, -.03rem -.06rem .2rem lightgrey inset;
+}
