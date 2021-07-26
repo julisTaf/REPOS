@@ -12,7 +12,7 @@
     <script src="../js/Nav.js" defer></script>
     <script src="../js/Filter.js" defer></script>
     <script src="../js/Tabs.js"></script>
-    <script src="https://kit.fontawesome.com/56a272ca2b.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/56a272ca2b.js" crossorigin="anonymous"></script> -->
     <title>Liste des produits</title>
 </head>
 <body>
@@ -34,6 +34,14 @@
     </nav>
 
     <main>
+        <form method="get">
+            <select name="Arrival">
+                <option value="3">Arrivage du 05/07/2021</option>
+                <option value="4">Arrivage du 23/07/2021</option>
+            </select>
+            <button type="submit">Voir</button>
+        </form>
+        
         <div class="tabHeaders">
             <button onclick="openPage(1)" class="tabHeader active">Tout</button>
             <button onclick="openPage(2)" class="tabHeader">Disponible(s)</button>
