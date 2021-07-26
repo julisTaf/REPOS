@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/Nav.css">
     <link rel="stylesheet" href="../css/Filter.css">
+    <link rel="stylesheet" href="../css/Tabs.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oregano">
     <script src="../js/Nav.js" defer></script>
+    <script src="../js/Tabs.js"></script>
     <script src="../js/Filter.js" defer></script>
     <title>Liste des réservations</title>
 </head>
@@ -30,7 +32,20 @@
     </nav>
 
     <main>
-        <input type="text" onkeyup="filterTable(2)" autocomplete="off" placeholder="Rechercher . . .">
+        <form method="get">
+            <select name="Arrival">
+                <option value="3">Arrivage du 05/07/2021</option>
+                <option value="4">Arrivage du 23/07/2021</option>
+            </select>
+            <button type="submit">Voir</button>
+        </form>
+
+        <div class="tabHeaders">
+            <button onclick="openPage(1)" class="tabHeader active">Tout  <span class="grey">&#x00F0;</span></button>
+            <button onclick="openPage(2)" class="tabHeader">En suspens  <span class="orange">&#x00F0;</span></button>
+            <button onclick="openPage(3)" class="tabHeader">Aboutie(s)  <span class="green">&#x00F0;</span></button>
+            <button onclick="openPage(4)" class="tabHeader">Annulée(s)  <span class="red">&#x00F0;</span></button>
+        </div>
     </main>
 </body>
 </html>
