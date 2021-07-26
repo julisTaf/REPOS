@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Nav.css">
+    <link rel="stylesheet" href="../css/Product.css">
+    <link rel="stylesheet" href="../css/Filter.css">
+    <link rel="stylesheet" href="../css/Tabs.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oregano">
+    <script src="../js/Nav.js" defer></script>
+    <script src="../js/Filter.js" defer></script>
+    <script src="../js/Tabs.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/56a272ca2b.js" crossorigin="anonymous"></script> -->
+    <title>Liste des commandes</title>
+</head>
+<body>
+    <nav class="topnav">
+        <button class="open" onclick="openNav()"><span>&#9776; </span></button>
+        <h3>YH</h3>
+    </nav>
+
+    <nav class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/RHR/Overview">Bilan actuel</a>
+        <a href="/RHR/Products" class="active">Produits</a>
+        <a href="/RHR/NewProducts">Nouveau(x) produit(s)</a>
+        <a href="/RHR/Commands">Commandes</a>
+        <a href="/RHR/NewCommand">Nouvelle(s) commande(s)</a>
+        <a href="/RHR/Reservations">Réservations</a>
+        <a href="/RHR/NewReservation">Nouvelle(s) réservation(s)</a>
+        <a href="/RHR/History">Historique</a>
+    </nav>
+
+    <main>
+        <form method="get">
+            <select name="Arrival">
+                <option value="3">Arrivage du 05/07/2021</option>
+                <option value="4">Arrivage du 23/07/2021</option>
+            </select>
+            <button type="submit">Voir</button>
+        </form>
+        
+        <div class="tabHeaders">
+            <button onclick="openPage(1)" class="tabHeader active">Tout <span class="grey">&#x21D4;</span></button>
+            <button onclick="openPage(2)" class="tabHeader">Conclue(s) <span class="green">&#x21D4;</span></button>
+            <button onclick="openPage(3)" class="tabHeader">A conclure <span class="orange">&#x21D4;</span></button>
+            <button onclick="openPage(4)" class="tabHeader">Annulée(s) <span class="red">&#x21D4;</span></button>
+        </div>
+
+        <section class="tabContent active">
+            <input type="text" onkeyup="filterTable([2], 1)" placeholder="Rechercher une catégorie . . ." autocomplete="off" autocapitalize="on">
+            <table class="productList">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Client</th>
+                        <th>Contact</th>
+                        <th>Lieu</th>
+                        <th>Produit(s)</th>
+                        <th>Montant</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>23</td>
+                        <td>John Doe</td>
+                        <td>0323477865</td>
+                        <td>FJKM Mahalavolona Andoharanofotsy</td>
+                        <td>Afficher</td>
+                        <td>12000Ar</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="tabContent">
+            <input type="text" onkeyup="filterTable([2], 2)" placeholder="Rechercher une catégorie . . ." autocomplete="off" autocapitalize="on">
+            <table class="productList">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Catégorie</th>
+                        <th>Couleur</th>
+                        <th>Descriptif</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>243</td>
+                        <td>Jogging</td>
+                        <td>Bleu&Blanc</td>
+                        <td>10-11 an</td>
+                        <td>7000Ar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="tabContent">
+            <input type="text" onkeyup="filterTable([2], 3)" placeholder="Rechercher une catégorie . . ." autocomplete="off" autocapitalize="on">
+            <table class="productList">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Catégorie</th>
+                        <th>Couleur</th>
+                        <th>Descriptif</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>244</td>
+                        <td>Veste</td>
+                        <td>Bleu delavé</td>
+                        <td>2-3 an</td>
+                        <td>8000Ar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="tabContent">
+            <input type="text" onkeyup="filterTable([2], 3)" placeholder="Rechercher une catégorie . . ." autocomplete="off" autocapitalize="on">
+            <table class="productList">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Catégorie</th>
+                        <th>Couleur</th>
+                        <th>Descriptif</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>245</td>
+                        <td>Robe fleurie</td>
+                        <td>Rouge</td>
+                        <td>6-7 an</td>
+                        <td>11000Ar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
