@@ -43,9 +43,10 @@
         </form>
         
         <div class="tabHeaders">
-            <button onclick="openPage(1)" class="tabHeader active">Tout</button>
-            <button onclick="openPage(2)" class="tabHeader">Disponible(s)</button>
-            <button onclick="openPage(3)" class="tabHeader">Vendu(s)</button>
+            <button onclick="openPage(1)" class="tabHeader active">Tout  <span class="grey">&#x2663;</span></button>
+            <button onclick="openPage(2)" class="tabHeader">Disponible(s)  <span class="green">&#x2663;</span></button>
+            <button onclick="openPage(3)" class="tabHeader">Vendu(s)  <span class="blue">&#x2663;</span></button>
+            <button onclick="openPage(4)" class="tabHeader">Reservé(s)  <span class="orange">&#x2663;</span></button>
         </div>
 
         <section class="tabContent active">
@@ -74,6 +75,13 @@
                         <td>Bleu delavé</td>
                         <td>2-3 an</td>
                         <td>8000Ar</td>
+                    </tr>
+                    <tr>
+                        <td>245</td>
+                        <td>Robe fleurie</td>
+                        <td>Rouge</td>
+                        <td>6-7 an</td>
+                        <td>11000Ar</td>
                     </tr>
                 </tbody>
             </table>
@@ -122,6 +130,30 @@
                         <td>Bleu delavé</td>
                         <td>2-3 an</td>
                         <td>8000Ar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="tabContent">
+            <input type="text" onkeyup="filterTable([2], 3)" placeholder="Rechercher une catégorie . . ." autocomplete="off" autocapitalize="on">
+            <table class="productList">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Catégorie</th>
+                        <th>Couleur</th>
+                        <th>Descriptif</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>245</td>
+                        <td>Robe fleurie</td>
+                        <td>Rouge</td>
+                        <td>6-7 an</td>
+                        <td>11000Ar</td>
                     </tr>
                 </tbody>
             </table>
