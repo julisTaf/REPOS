@@ -27,6 +27,7 @@ main form button[type=submit] {
 main table {
     width: 99%;
     margin: .25rem auto .1rem;
+    overflow-x: auto;
 }
 
 main table,  main table th, main table td {

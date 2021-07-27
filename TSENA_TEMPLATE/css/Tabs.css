@@ -19,19 +19,19 @@ div.tabHeaders > button.tabHeader span {
     margin: auto .1rem;
 }
 
-div.tabHeaders > button.tabHeader span.red {
+span.red {
     color: red;
 }
 
-div.tabHeaders > button.tabHeader span.blue {
+span.blue {
     color: blue;
 }
 
-div.tabHeaders > button.tabHeader span.green {
+span.green {
     color: rgb(51, 202, 51);
 }
 
-div.tabHeaders > button.tabHeader span.orange {
+span.orange {
     color: rgb(255, 230, 0);
 }
 
@@ -51,6 +51,7 @@ section.tabContent {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-x: auto;
 }
 
 section.tabContent.active {
